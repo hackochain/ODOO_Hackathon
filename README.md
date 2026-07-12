@@ -25,6 +25,11 @@ Scikit-learn
 Pandas
 NumPy
 
+Phase1:
+Currently implementing the Route Management and Real-Time Vehicle Tracking modules. These features enable transport administrators to efficiently manage routes, monitor live vehicle locations, optimize fleet movement, and improve operational visibility.
+
+
+
 DEVELOPMENT TOOLS:
 Git
 GitHub
