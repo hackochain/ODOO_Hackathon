@@ -1,0 +1,416 @@
+/* =========================================================
+   TransitOps - Global Styles
+   ========================================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   CSS Variables
+=========================== */
+
+:root{
+
+    --bg:#0B1220;
+    --sidebar:#111827;
+    --secondary-bg:#162033;
+
+    --glass:rgba(31,41,55,.65);
+
+    --border:rgba(255,255,255,.08);
+
+    --primary:#2563EB;
+    --secondary:#06B6D4;
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --text:#ffffff;
+    --text-light:#94A3B8;
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--secondary);
+
+}
+
+/* ===========================
+   Links
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   Section
+=========================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-primary-custom{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    border:none;
+
+    color:white;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary-custom:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+
+}
+
+.btn-outline-custom{
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+}
+
+.btn-outline-custom:hover{
+
+    background:rgba(255,255,255,.06);
+
+}
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.glass-card{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(37,99,235,.35);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+.section-title{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+    color:var(--text-light);
+
+    font-size:18px;
+
+    max-width:700px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   Gradient Text
+=========================== */
+
+.gradient-text{
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(11,18,32,.75);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar-brand{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:20px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--secondary)!important;
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    color:var(--text-light);
+
+    margin:30px 0;
+
+    line-height:2;
+
+}
+
+/* ===========================
+   Floating Glow
+=========================== */
+
+.blur-circle{
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+.blur-one{
+
+    background:#2563EB;
+
+    top:-150px;
+
+    left:-100px;
+
+}
+
+.blur-two{
+
+    background:#06B6D4;
+
+    bottom:-150px;
+
+    right:-100px;
+
+}
+
+/* ===========================
+   Dashboard Mockup
+=========================== */
+
+.mockup{
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.feature-card{
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.feature-card i{
+
+    font-size:42px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h4{
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    background:#08111d;
+
+    padding:60px 0;
+
+}
+
+footer p{
+
+    color:var(--text-light);
+
+}
