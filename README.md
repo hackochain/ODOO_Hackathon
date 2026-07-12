@@ -99,3 +99,6 @@ The backend packages and dependencies are installed successfully
 
 PHASE 9:
 The backend was successfully completed and published
+
+PHASE 10:
+Dependancies and packages that are neccasary for backend are installed.
