@@ -233,44 +233,46 @@ section{
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
+.feature-card i {
+    font-size: 42px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
 /* ===========================
    Navbar
 =========================== */
 
-.navbar{
-
-    backdrop-filter:blur(20px);
-
-    background:rgba(11,18,32,.75);
-
-    border-bottom:1px solid var(--border);
-
+.navbar {
+    backdrop-filter: blur(20px);
+    background: rgba(11,18,32,.75);
+    border-bottom: 1px solid var(--border);
 }
 
-.navbar-brand{
-
-    font-size:28px;
-
-    font-weight:700;
-
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff !important;   /* Makes TransitOps white */
 }
 
-.nav-link{
-
-    color:white !important;
-
-    margin-left:20px;
-
-    transition:.3s;
-
+.navbar-brand:hover {
+    color: #ffffff !important;   /* Keeps it white on hover */
 }
 
-.nav-link:hover{
-
-    color:var(--secondary)!important;
-
+.navbar-brand i {
+    color: #ffffff;              /* Makes the bus icon white too */
 }
 
+.nav-link {
+    color: white !important;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary) !important;
+}
 /* ===========================
    Hero
 =========================== */
