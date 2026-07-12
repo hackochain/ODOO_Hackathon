@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TransitOps | Routes</title>
+
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<!-- Leaflet Map -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+
+<!-- Project CSS -->
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet" href="css/routes.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="wrapper">
+
+
+
+<!-- =====================================================
+                    SIDEBAR
+====================================================== -->
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-bus-simple"></i>
+
+<span>TransitOps</span>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="fleet.html">
+
+<i class="fa-solid fa-bus"></i>
+
+Fleet
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="drivers.html">
+
+<i class="fa-solid fa-id-card"></i>
+
+Drivers
+
+</a>
+
+</li>
+
+
+
+<li class="active">
+
+<a href="routes.html">
+
+<i class="fa-solid fa-route"></i>
+
+Routes
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="tracking.html">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Tracking
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Analytics
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="ai.html">
+
+<i class="fa-solid fa-brain"></i>
+
+AI Center
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="reports.html">
+
+<i class="fa-solid fa-file-lines"></i>
+
+Reports
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+<!-- =====================================================
+                    MAIN CONTENT
+====================================================== -->
+
+
+<main class="main-content">
+
+
+
+<!-- TOPBAR -->
+
+
+<header class="topbar">
+
+
+<button id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+
+<div class="search-box">
+
+
+<i class="fa-solid fa-search"></i>
+
+
+<input 
+type="text"
+id="routeSearch"
+placeholder="Search Routes...">
+
+
+</div>
+
+
+
+<div class="top-icons">
+
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+
+
+<button class="profile-btn">
+
+<img src="https://ui-avatars.com/api/?name=Admin">
+
+<span>
+Admin
+</span>
+
+</button>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="page-header">
+
+
+<h2>
+
+Smart Route Management
+
+</h2>
+
+
+<p>
+
+Manage routes, stops and schedules using intelligent transport analytics.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- =====================================================
+                    ROUTE STATISTICS
+====================================================== -->
+
+
+<div class="row g-4 mb-4">
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="glass-card route-stat">
+
+
+<i class="fa-solid fa-route"></i>
+
+
+<h2>
+
+48
+
+</h2>
+
+
+<p>
+
+Active Routes
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="glass-card route-stat">
+
+
+<i class="fa-solid fa-location-dot"></i>
+
+
+<h2>
+
+326
+
+</h2>
+
+
+<p>
+
+Total Stops
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="glass-card route-stat">
+
+
+<i class="fa-solid fa-road"></i>
+
+
+<h2>
+
+1240 KM
+
+</h2>
+
+
+<p>
+
+Daily Distance
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="glass-card route-stat">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+<h2>
+
+96%
+
+</h2>
+
+
+<p>
+
+On-Time Performance
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- =====================================================
+                    TOOLBAR
+====================================================== -->
+
+
+<div class="glass-card mb-4">
+
+
+<div class="row g-3 align-items-center">
+
+
+
+<div class="col-md-4">
+
+
+<input 
+class="form-control"
+placeholder="Route Name">
+
+
+</div>
+
+
+
+<div class="col-md-3">
+
+
+<select class="form-select">
+
+
+<option>
+All Status
+</option>
+
+
+<option>
+Active
+</option>
+
+
+<option>
+Delayed
+</option>
+
+
+<option>
+Inactive
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+<div class="col-md-3">
+
+
+<select class="form-select">
+
+
+<option>
+All Areas
+</option>
+
+
+<option>
+City
+</option>
+
+
+<option>
+Highway
+</option>
+
+
+<option>
+Airport
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+<div class="col-md-2 text-end">
+
+
+<button class="btn btn-primary">
+
+
+<i class="fa-solid fa-plus"></i>
+
+Add Route
+
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- =====================================================
+                    ROUTES + MAP
+====================================================== -->
+
+
+<div class="row g-4">
+
+
+
+<!-- ROUTE CARDS -->
+
+
+<div class="col-lg-5">
+
+
+
+<div id="routeContainer">
+
+
+
+
+
+<div class="glass-card route-card mb-4">
+
+
+
+<div class="d-flex justify-content-between">
+
+
+<div>
+
+
+<h4>
+
+Route 101
+
+</h4>
+
+
+<p class="text-secondary">
+
+Central Station → Airport
+
+</p>
+
+
+</div>
+
+
+
+<span class="badge bg-success">
+
+Active
+
+</span>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<p>
+
+<i class="fa-solid fa-location-dot text-info"></i>
+
+12 Stops
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-road text-warning"></i>
+
+32 KM Distance
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-clock text-primary"></i>
+
+45 Minutes
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-users text-success"></i>
+
+1200 Daily Passengers
+
+</p>
+
+
+
+
+<div class="d-flex gap-2">
+
+
+<button class="btn btn-outline-info">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+
+<button class="btn btn-outline-warning">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+
+<button class="btn btn-outline-danger">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="glass-card route-card mb-4">
+
+
+
+<div class="d-flex justify-content-between">
+
+
+<div>
+
+
+<h4>
+
+Route 205
+
+</h4>
+
+
+<p class="text-secondary">
+
+Railway Station → Tech Park
+
+</p>
+
+
+</div>
+
+
+
+<span class="badge bg-warning">
+
+Delayed
+
+</span>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<p>
+
+<i class="fa-solid fa-location-dot text-info"></i>
+
+18 Stops
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-road text-warning"></i>
+
+41 KM Distance
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-clock text-primary"></i>
+
+70 Minutes
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-users text-success"></i>
+
+1800 Daily Passengers
+
+</p>
+
+
+
+<div class="d-flex gap-2">
+
+
+<button class="btn btn-outline-info">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+
+<button class="btn btn-outline-warning">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+
+<button class="btn btn-outline-danger">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- MAP -->
+
+
+<div class="col-lg-7">
+
+
+<div class="glass-card">
+
+
+<h4 class="mb-3">
+
+Live Route Map
+
+</h4>
+
+
+
+<div id="routeMap"></div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+                    STOP TIMELINE
+====================================================== -->
+
+
+<div class="glass-card mt-4">
+
+
+<h4>
+
+Route 101 Stops
+
+</h4>
+
+
+<div class="timeline mt-4">
+
+
+<div class="stop">
+
+<span></span>
+
+Central Station
+
+</div>
+
+
+<div class="stop">
+
+<span></span>
+
+City Mall
+
+</div>
+
+
+<div class="stop">
+
+<span></span>
+
+University
+
+</div>
+
+
+<div class="stop">
+
+<span></span>
+
+Airport Road
+
+</div>
+
+
+<div class="stop">
+
+<span></span>
+
+Terminal
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Scripts -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+<script src="js/routes.js"></script>
+
+
+</body>
+
+</html>

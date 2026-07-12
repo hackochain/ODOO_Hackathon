@@ -1,0 +1,346 @@
+/* ==========================================
+   TransitOps Routes Management
+========================================== */
+
+
+/* ===============================
+        Route Statistics
+================================ */
+
+.route-stat{
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+.route-stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563EB;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+}
+
+
+.route-stat i{
+
+    font-size:35px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+.route-stat h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+
+.route-stat p{
+
+    color:#94A3B8;
+
+}
+
+
+
+
+
+/* ===============================
+        Route Cards
+================================ */
+
+
+.route-card{
+
+    transition:.35s;
+
+}
+
+
+.route-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#06B6D4;
+
+}
+
+
+.route-card h4{
+
+    font-weight:600;
+
+}
+
+
+.route-card p{
+
+    color:#CBD5E1;
+
+    margin-bottom:12px;
+
+}
+
+
+.route-card i{
+
+    width:25px;
+
+}
+
+
+
+/* ===============================
+        Buttons
+================================ */
+
+
+.route-card .btn{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+}
+
+
+.route-card .btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ===============================
+        Map
+================================ */
+
+
+#routeMap{
+
+    height:500px;
+
+    width:100%;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+/* ===============================
+        Timeline
+================================ */
+
+
+.timeline{
+
+    position:relative;
+
+    padding-left:35px;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:10px;
+
+    top:0;
+
+    height:100%;
+
+    width:3px;
+
+    background:#2563EB;
+
+}
+
+
+
+.stop{
+
+    position:relative;
+
+    padding:15px 0;
+
+    color:#E2E8F0;
+
+    font-size:16px;
+
+}
+
+
+
+.stop span{
+
+    position:absolute;
+
+    left:-31px;
+
+    top:22px;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#06B6D4;
+
+    border:3px solid #0B1220;
+
+}
+
+
+
+/* ===============================
+        Filters
+================================ */
+
+
+.form-select,
+.form-control{
+
+    background:#162033;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.form-select:focus,
+.form-control:focus{
+
+    background:#162033;
+
+    color:white;
+
+    border-color:#2563EB;
+
+    box-shadow:none;
+
+}
+
+
+
+
+/* ===============================
+        Badge Styling
+================================ */
+
+
+.badge{
+
+    padding:8px 15px;
+
+    border-radius:25px;
+
+}
+
+
+
+
+
+/* ===============================
+        Animation
+================================ */
+
+
+.route-card,
+.route-stat{
+
+    animation:routeFade .6s ease;
+
+}
+
+
+
+@keyframes routeFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+/* ===============================
+        Responsive
+================================ */
+
+
+@media(max-width:992px){
+
+
+    #routeMap{
+
+        height:400px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    #routeMap{
+
+        height:350px;
+
+    }
+
+
+}

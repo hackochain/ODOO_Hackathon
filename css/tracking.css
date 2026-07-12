@@ -1,0 +1,419 @@
+/* ==========================================
+        TransitOps Live Tracking
+========================================== */
+
+
+/* ==========================================
+        Tracking Statistics
+========================================== */
+
+
+.tracking-stat{
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+.tracking-stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#06B6D4;
+
+    box-shadow:
+    0 15px 35px rgba(6,182,212,.25);
+
+}
+
+
+
+.tracking-stat i{
+
+    font-size:35px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.tracking-stat h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+
+
+.tracking-stat p{
+
+    color:#94A3B8;
+
+}
+
+
+
+
+
+/* ==========================================
+        Map Container
+========================================== */
+
+
+.map-container{
+
+    padding:20px;
+
+}
+
+
+
+#trackingMap{
+
+    height:620px;
+
+    width:100%;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+/* ==========================================
+        Vehicle Information Panel
+========================================== */
+
+
+.vehicle-panel{
+
+    height:100%;
+
+}
+
+
+
+.vehicle-panel h4{
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.vehicle-details{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+
+
+.detail-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.detail-box:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(37,99,235,.12);
+
+}
+
+
+
+
+
+.detail-box i{
+
+    font-size:22px;
+
+}
+
+
+
+.detail-box small{
+
+    color:#94A3B8;
+
+}
+
+
+
+.detail-box h6{
+
+    margin:0;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* ==========================================
+        Live Badge
+========================================== */
+
+
+.badge.bg-success{
+
+    animation:pulse 1.8s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+    box-shadow:
+    0 0 0 0 rgba(16,185,129,.5);
+
+}
+
+
+70%{
+
+    box-shadow:
+    0 0 0 12px rgba(16,185,129,0);
+
+}
+
+
+100%{
+
+    box-shadow:
+    0 0 0 0 rgba(16,185,129,0);
+
+}
+
+
+}
+
+
+
+
+
+/* ==========================================
+        Table
+========================================== */
+
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+
+
+.table td,
+.table th{
+
+    padding:18px;
+
+    border-color:
+    rgba(255,255,255,.08);
+
+}
+
+
+
+.table-hover tbody tr:hover{
+
+    background:
+    rgba(37,99,235,.1);
+
+}
+
+
+
+
+
+
+/* ==========================================
+        Vehicle Marker
+========================================== */
+
+
+.vehicle-marker{
+
+    animation:
+    vehiclePulse 2s infinite;
+
+}
+
+
+
+@keyframes vehiclePulse{
+
+
+0%{
+
+    transform:scale(1);
+
+}
+
+
+50%{
+
+    transform:scale(1.15);
+
+}
+
+
+100%{
+
+    transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+        Buttons
+========================================== */
+
+
+.btn-primary{
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+    );
+
+    border:none;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+/* ==========================================
+        Responsive
+========================================== */
+
+
+@media(max-width:1200px){
+
+
+#trackingMap{
+
+    height:500px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:992px){
+
+
+#trackingMap{
+
+    height:450px;
+
+}
+
+
+.vehicle-panel{
+
+    margin-top:20px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:576px){
+
+
+#trackingMap{
+
+    height:350px;
+
+}
+
+
+.tracking-stat h2{
+
+    font-size:26px;
+
+}
+
+
+}
