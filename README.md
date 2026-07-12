@@ -87,6 +87,7 @@ Finished setting up the controllers in the backend.
 
 moving to the services section to implement features in each sections.
 
-
+PHASE 7:
+Fineshed setting up the backend.
 
 
