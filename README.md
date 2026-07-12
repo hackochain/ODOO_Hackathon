@@ -48,3 +48,6 @@ The Dashboard serves as the central control panel of TransitOps. It provides an 
 Settings
 The Settings module enables administrators to configure system preferences, manage user accounts, notification settings, application themes, security options, and organization details.
 
+Phase3:
+The front end was successfully implemented
+
