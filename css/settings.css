@@ -1,0 +1,300 @@
+/* ==========================================
+        TransitOps Settings Page
+========================================== */
+
+
+
+/* ===============================
+        Settings Cards
+================================ */
+
+
+.settings-card{
+
+    height:100%;
+
+    transition:.35s;
+
+}
+
+
+
+.settings-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2563EB;
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.25);
+
+}
+
+
+
+
+
+.settings-card h4{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+
+
+.settings-card h4 i{
+
+    color:#06B6D4;
+
+}
+
+
+
+
+
+/* ===============================
+        Input Fields
+================================ */
+
+
+.settings-card label{
+
+    color:#94A3B8;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+}
+
+
+
+.form-control{
+
+    background:#162033;
+
+    color:#ffffff;
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+}
+
+
+
+.form-control:focus{
+
+    background:#162033;
+
+    color:white;
+
+    border-color:#2563EB;
+
+    box-shadow:none;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Setting Rows
+================================ */
+
+
+.setting-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.setting-row:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.setting-row span{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+
+/* ===============================
+        Switch Styling
+================================ */
+
+
+.form-check-input{
+
+    width:45px;
+
+    height:22px;
+
+    background-color:#334155;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+.form-check-input:checked{
+
+    background-color:#2563EB;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Save Button
+================================ */
+
+
+.btn-primary{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #06B6D4
+
+    );
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Animation
+================================ */
+
+
+.settings-card{
+
+    animation:
+
+    settingsFade .6s ease;
+
+}
+
+
+
+@keyframes settingsFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Responsive
+========================================== */
+
+
+@media(max-width:768px){
+
+
+.setting-row{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+
+}

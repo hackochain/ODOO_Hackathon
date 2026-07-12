@@ -1,0 +1,393 @@
+/* ==========================================
+        TransitOps AI Center
+========================================== */
+
+
+/* ===============================
+        AI KPI CARDS
+================================ */
+
+
+.ai-card{
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+
+.ai-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#06B6D4;
+
+    box-shadow:
+
+    0 15px 40px rgba(6,182,212,.25);
+
+}
+
+
+
+.ai-card i{
+
+    font-size:36px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.ai-card h2{
+
+    font-size:35px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+
+
+.ai-card p{
+
+    color:#94A3B8;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Prediction Cards
+================================ */
+
+
+.prediction-card h4{
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.prediction-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+
+
+.prediction-item:hover{
+
+    transform:translateX(8px);
+
+    background:
+
+    rgba(37,99,235,.12);
+
+}
+
+
+
+.prediction-item i{
+
+    font-size:28px;
+
+}
+
+
+
+.prediction-item div{
+
+    flex:1;
+
+}
+
+
+
+.prediction-item h6{
+
+    color:white;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+
+
+.prediction-item p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+
+
+.prediction-item span{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#06B6D4;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        AI Recommendations
+================================ */
+
+
+.recommendation{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    margin-top:18px;
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border-radius:15px;
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.recommendation:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#2563EB;
+
+}
+
+
+
+.recommendation i{
+
+    font-size:25px;
+
+    color:#F59E0B;
+
+}
+
+
+
+.recommendation p{
+
+    color:#CBD5E1;
+
+    margin:0;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Risk Meter
+================================ */
+
+
+.risk-container{
+
+    width:100%;
+
+    height:18px;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+}
+
+
+
+.risk-progress{
+
+    width:32%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #10B981,
+    #06B6D4
+    );
+
+    border-radius:20px;
+
+    animation:
+
+    riskAnimation 1.5s ease;
+
+}
+
+
+
+@keyframes riskAnimation{
+
+
+from{
+
+    width:0;
+
+}
+
+
+to{
+
+    width:32%;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Animations
+================================ */
+
+
+.ai-card,
+.prediction-card,
+.recommendation{
+
+    animation:
+
+    aiFade .6s ease;
+
+}
+
+
+
+@keyframes aiFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Responsive
+================================ */
+
+
+@media(max-width:768px){
+
+
+.prediction-item{
+
+    flex-wrap:wrap;
+
+}
+
+
+.prediction-item span{
+
+    width:100%;
+
+}
+
+
+}

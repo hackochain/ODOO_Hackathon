@@ -1,0 +1,261 @@
+/* ==========================================
+        TransitOps Analytics Page
+========================================== */
+
+
+/* ===============================
+        Analytics KPI Cards
+================================ */
+
+
+.analytics-card{
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+.analytics-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563EB;
+
+    box-shadow:
+    0 15px 40px rgba(37,99,235,.25);
+
+}
+
+
+
+.analytics-card i{
+
+    font-size:35px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.analytics-card h2{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+
+
+.analytics-card p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+
+
+
+/* ===============================
+        Chart Cards
+================================ */
+
+
+.chart-card{
+
+    padding:25px;
+
+    min-height:350px;
+
+}
+
+
+
+.chart-card h4{
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+canvas{
+
+    max-height:280px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        AI Insight Boxes
+================================ */
+
+
+.insight-box{
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+
+
+.insight-box:hover{
+
+    transform:translateY(-6px);
+
+    background:
+
+    rgba(37,99,235,.12);
+
+}
+
+
+
+.insight-box i{
+
+    font-size:28px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.insight-box p{
+
+    color:#CBD5E1;
+
+    margin:0;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Page Animation
+================================ */
+
+
+.analytics-card,
+.chart-card,
+.insight-box{
+
+    animation:
+    fadeAnalytics .6s ease;
+
+}
+
+
+
+@keyframes fadeAnalytics{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Responsive
+================================ */
+
+
+@media(max-width:992px){
+
+
+.chart-card{
+
+    margin-bottom:20px;
+
+}
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+.analytics-card h2{
+
+    font-size:28px;
+
+}
+
+
+
+.chart-card{
+
+    padding:18px;
+
+}
+
+
+}

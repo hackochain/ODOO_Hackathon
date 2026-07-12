@@ -1,0 +1,311 @@
+/* ==========================================
+        TransitOps Reports Page
+========================================== */
+
+
+/* ===============================
+        Report Cards
+================================ */
+
+
+.report-card{
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+
+.report-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563EB;
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.25);
+
+}
+
+
+
+.report-card i{
+
+    font-size:35px;
+
+    color:#06B6D4;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.report-card h3{
+
+    color:#ffffff;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+
+
+.report-card p{
+
+    color:#94A3B8;
+
+}
+
+
+
+
+
+/* ===============================
+        Report Filters
+================================ */
+
+
+.form-control,
+.form-select{
+
+    background:#162033;
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+}
+
+
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#162033;
+
+    color:white;
+
+    border-color:#2563EB;
+
+    box-shadow:none;
+
+}
+
+
+
+
+
+
+/* ===============================
+        Report Table
+================================ */
+
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+
+
+.table th{
+
+    color:#94A3B8;
+
+    font-weight:500;
+
+}
+
+
+
+.table td{
+
+    color:#E2E8F0;
+
+    padding:18px;
+
+    border-color:
+
+    rgba(255,255,255,.08);
+
+}
+
+
+
+.table-hover tbody tr:hover{
+
+    background:
+
+    rgba(37,99,235,.1);
+
+}
+
+
+
+
+
+/* ===============================
+        Export Buttons
+================================ */
+
+
+.btn-outline-success,
+.btn-outline-danger{
+
+    border-radius:12px;
+
+    padding:10px 18px;
+
+}
+
+
+
+.btn-outline-success:hover,
+.btn-outline-danger:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Generate Button
+================================ */
+
+
+.btn-primary{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #06B6D4
+
+    );
+
+    border:none;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Badge
+================================ */
+
+
+.badge{
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Animation
+================================ */
+
+
+.report-card,
+.glass-card{
+
+    animation:
+
+    reportFade .6s ease;
+
+}
+
+
+
+@keyframes reportFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+        Responsive
+================================ */
+
+
+@media(max-width:768px){
+
+
+.report-card h3{
+
+    font-size:26px;
+
+}
+
+
+
+.table{
+
+    min-width:700px;
+
+}
+
+
+}

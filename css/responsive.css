@@ -1,0 +1,368 @@
+/* ==========================================
+        TransitOps Responsive Design
+========================================== */
+
+
+/* ===============================
+        Large Screens
+================================ */
+
+
+@media (max-width:1200px){
+
+
+.sidebar{
+
+    width:240px;
+
+}
+
+
+
+.main-content{
+
+    margin-left:240px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ===============================
+        Tablets
+================================ */
+
+
+@media (max-width:992px){
+
+
+
+.sidebar{
+
+    position:fixed;
+
+    left:-260px;
+
+    top:0;
+
+    height:100vh;
+
+    z-index:1000;
+
+    transition:.35s;
+
+}
+
+
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+
+
+.main-content{
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+
+
+.topbar{
+
+    padding:15px;
+
+}
+
+
+
+.search-box{
+
+    width:250px;
+
+}
+
+
+
+.row{
+
+    gap:10px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ===============================
+        Mobile Devices
+================================ */
+
+
+@media(max-width:768px){
+
+
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+.topbar{
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+
+#menuBtn{
+
+    display:block;
+
+}
+
+
+
+.search-box{
+
+    width:100%;
+
+    order:3;
+
+}
+
+
+
+.top-icons{
+
+    margin-left:auto;
+
+}
+
+
+
+.profile-btn span{
+
+    display:none;
+
+}
+
+
+
+
+
+.glass-card{
+
+    padding:20px !important;
+
+}
+
+
+
+.page-header h2{
+
+    font-size:26px;
+
+}
+
+
+
+.page-header p{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* Tables */
+
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+
+
+.table{
+
+    min-width:700px;
+
+}
+
+
+
+
+
+/* Dashboard Cards */
+
+
+.kpi-card h2{
+
+    font-size:28px;
+
+}
+
+
+
+
+/* Charts */
+
+
+canvas{
+
+    max-height:250px;
+
+}
+
+
+
+
+/* Buttons */
+
+
+.btn{
+
+    width:100%;
+
+    margin-bottom:10px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ===============================
+        Small Mobile
+================================ */
+
+
+@media(max-width:480px){
+
+
+
+.logo span{
+
+    font-size:18px;
+
+}
+
+
+
+.topbar{
+
+    padding:12px;
+
+}
+
+
+
+.page-header h2{
+
+    font-size:22px;
+
+}
+
+
+
+.glass-card{
+
+    border-radius:15px;
+
+}
+
+
+
+.analytics-card h2,
+.ai-card h2{
+
+    font-size:25px;
+
+}
+
+
+
+.prediction-item{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+
+
+}
+
+
+
+
+
+/* ===============================
+        Sidebar Overlay
+================================ */
+
+
+.sidebar-overlay{
+
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+rgba(0,0,0,.5);
+
+z-index:999;
+
+
+}
+
+
+
+.sidebar-overlay.active{
+
+
+display:block;
+
+
+}
