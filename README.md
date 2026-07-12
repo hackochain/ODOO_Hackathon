@@ -86,7 +86,6 @@ The main technologies used are:
 #Role-Based Access Control (RBAC)
 
 PHASE 6:
-
 upgraded the routes in the backend.
 starting the controlling part of all elements like analytics, fleet, ai etc..,
 Finished setting up the controllers in the backend.
@@ -97,3 +96,6 @@ Fineshed setting up the backend.
 
 PHASE 8:
 The backend packages and dependencies are installed successfully
+
+PHASE 9:
+The backend was successfully completed and published
