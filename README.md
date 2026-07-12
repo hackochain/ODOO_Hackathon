@@ -51,7 +51,6 @@ The Settings module enables administrators to configure system preferences, mana
 Phase3:
 The front end was successfully implemented
 
-Phase:
+Phase4:
 The backend is setting bulid
-
-
+-> The data  base was updated in the backend 
