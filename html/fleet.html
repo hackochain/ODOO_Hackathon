@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TransitOps | Fleet Management</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/fleet.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus-simple"></i>
+
+<span>TransitOps</span>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li class="active"><a href="#"><i class="fa-solid fa-bus"></i> Fleet</a></li>
+
+<li><a href="drivers.html"><i class="fa-solid fa-id-card"></i> Drivers</a></li>
+
+<li><a href="routes.html"><i class="fa-solid fa-route"></i> Routes</a></li>
+
+<li><a href="tracking.html"><i class="fa-solid fa-location-dot"></i> Tracking</a></li>
+
+<li><a href="analytics.html"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+
+<li><a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+
+<li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<button id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div class="search-box">
+
+<i class="fa-solid fa-search"></i>
+
+<input type="text"
+placeholder="Search Vehicles...">
+
+</div>
+
+<div class="top-icons">
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<button class="profile-btn">
+
+<img src="https://ui-avatars.com/api/?name=Admin">
+
+<span>Admin</span>
+
+</button>
+
+</div>
+
+</header>
+
+<div class="page-header">
+
+<h2>Fleet Management</h2>
+
+<p>Manage all transport vehicles from one place.</p>
+
+</div>
+
+<!-- Fleet Stats -->
+
+<div class="row g-4 mb-4">
+
+<div class="col-lg-3">
+
+<div class="glass-card fleet-stat">
+
+<h6>Total Vehicles</h6>
+
+<h2>248</h2>
+
+<p class="text-success">
+
++12 This Month
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="glass-card fleet-stat">
+
+<h6>Active</h6>
+
+<h2>180</h2>
+
+<p class="text-success">
+
+Running
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="glass-card fleet-stat">
+
+<h6>Maintenance</h6>
+
+<h2>35</h2>
+
+<p class="text-warning">
+
+Scheduled
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="glass-card fleet-stat">
+
+<h6>Idle</h6>
+
+<h2>33</h2>
+
+<p class="text-danger">
+
+Not Assigned
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Toolbar -->
+
+<div class="glass-card mb-4">
+
+<div class="row g-3">
+
+<div class="col-md-3">
+
+<input class="form-control"
+placeholder="Vehicle Number">
+
+</div>
+
+<div class="col-md-3">
+
+<select class="form-select">
+
+<option>All Status</option>
+
+<option>Active</option>
+
+<option>Maintenance</option>
+
+<option>Idle</option>
+
+</select>
+
+</div>
+
+<div class="col-md-3">
+
+<select class="form-select">
+
+<option>All Types</option>
+
+<option>Bus</option>
+
+<option>Van</option>
+
+<option>Mini Bus</option>
+
+</select>
+
+</div>
+
+<div class="col-md-3 text-end">
+
+<button class="btn btn-primary">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Vehicle
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- =====================================================
+                    VEHICLE TABLE
+====================================================== -->
+
+<div class="glass-card">
+
+    <div class="table-responsive">
+
+        <table class="table table-dark table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Vehicle</th>
+                    <th>Driver</th>
+                    <th>Type</th>
+                    <th>Fuel</th>
+                    <th>Health</th>
+                    <th>GPS</th>
+                    <th>Last Service</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- Vehicle 1 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="d-flex align-items-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/512/61/61231.png"
+                                class="vehicle-img me-3">
+
+                            <div>
+
+                                <strong>TR-101</strong>
+
+                                <br>
+
+                                <small class="text-secondary">
+
+                                    Volvo 9400
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Ramesh Kumar</td>
+
+                    <td>AC Bus</td>
+
+                    <td>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-success"
+                                style="width:85%;">
+
+                                85%
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Excellent
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-primary">
+
+                            Online
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        12 Jul 2026
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Active
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-sm btn-outline-info">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-warning">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-danger">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- Vehicle 2 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="d-flex align-items-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/512/61/61231.png"
+                                class="vehicle-img me-3">
+
+                            <div>
+
+                                <strong>TR-205</strong>
+
+                                <br>
+
+                                <small class="text-secondary">
+
+                                    Ashok Leyland
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Prakash</td>
+
+                    <td>Mini Bus</td>
+
+                    <td>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-warning"
+                                style="width:56%;">
+
+                                56%
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-warning">
+
+                            Good
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Online
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        08 Jul 2026
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-warning">
+
+                            Maintenance
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-sm btn-outline-info">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-warning">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-danger">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- Vehicle 3 -->
+
+                <tr>
+
+                    <td>
+
+                        <div class="d-flex align-items-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/512/61/61231.png"
+                                class="vehicle-img me-3">
+
+                            <div>
+
+                                <strong>TR-330</strong>
+
+                                <br>
+
+                                <small class="text-secondary">
+
+                                    Tata Starbus
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Arun</td>
+
+                    <td>Electric</td>
+
+                    <td>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-info"
+                                style="width:98%;">
+
+                                98%
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Excellent
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Online
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        10 Jul 2026
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Active
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-sm btn-outline-info">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-warning">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-danger">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Pagination -->
+
+<nav class="mt-4">
+
+    <ul class="pagination justify-content-end">
+
+        <li class="page-item disabled">
+
+            <a class="page-link">
+
+                Previous
+
+            </a>
+
+        </li>
+
+        <li class="page-item active">
+
+            <a class="page-link">
+
+                1
+
+            </a>
+
+        </li>
+
+        <li class="page-item">
+
+            <a class="page-link">
+
+                2
+
+            </a>
+
+        </li>
+
+        <li class="page-item">
+
+            <a class="page-link">
+
+                3
+
+            </a>
+
+        </li>
+
+        <li class="page-item">
+
+            <a class="page-link">
+
+                Next
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/fleet.js"></script>
+
+</body>
+
+</html>

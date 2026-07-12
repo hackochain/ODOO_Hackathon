@@ -221,16 +221,18 @@ section{
    Gradient Text
 =========================== */
 
-.gradient-text{
+.gradient-text {
+    background: linear-gradient(135deg, #2563EB, #06B6D4);
 
-    background:linear-gradient(135deg,#2563EB,#06B6D4);
+    /* Standard property */
+    background-clip: text;
 
-    -webkit-background-clip:text;
+    /* WebKit support */
+    -webkit-background-clip: text;
 
-    -webkit-text-fill-color:transparent;
-
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
-
 /* ===========================
    Navbar
 =========================== */

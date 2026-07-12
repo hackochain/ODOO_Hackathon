@@ -1,0 +1,243 @@
+/* ==========================================
+   TransitOps Drivers Page
+========================================== */
+
+.driver-card .glass-card{
+
+    transition:all .35s ease;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.driver-card .glass-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.25);
+
+}
+
+/* ======================================
+        Driver Avatar
+====================================== */
+
+.driver-avatar{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #2563EB;
+
+    padding:4px;
+
+    background:#162033;
+
+    transition:.35s;
+
+}
+
+.driver-card:hover .driver-avatar{
+
+    transform:scale(1.08);
+
+    border-color:#06B6D4;
+
+}
+
+/* ======================================
+        Driver Info
+====================================== */
+
+.driver-info{
+
+    margin-top:20px;
+
+}
+
+.driver-info p{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+.driver-info i{
+
+    width:24px;
+
+    font-size:16px;
+
+}
+
+/* ======================================
+        Status Badge
+====================================== */
+
+.driver-card .badge{
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+}
+
+/* ======================================
+        Action Buttons
+====================================== */
+
+.driver-card .btn{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.driver-card .btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ======================================
+        Statistics Card
+====================================== */
+
+.fleet-stat{
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.fleet-stat:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.fleet-stat h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+/* ======================================
+        Search Box
+====================================== */
+
+.search-box input{
+
+    color:#fff;
+
+}
+
+.search-box input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* ======================================
+        Card Animation
+====================================== */
+
+.driver-card{
+
+    animation:fadeDriver .6s ease;
+
+}
+
+@keyframes fadeDriver{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ======================================
+        Responsive
+====================================== */
+
+@media(max-width:992px){
+
+    .driver-avatar{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .driver-card{
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .driver-avatar{
+
+        width:85px;
+
+        height:85px;
+
+    }
+
+    .driver-info p{
+
+        font-size:14px;
+
+    }
+
+}

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TransitOps | Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-bus-simple"></i>
+
+            <span>TransitOps</span>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="fleet.html">
+
+                    <i class="fa-solid fa-bus"></i>
+
+                    Fleet
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="drivers.html">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                    Drivers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="routes.html">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    Routes
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="tracking.html">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Tracking
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="analytics.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Analytics
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="ai.html">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    AI Center
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search Vehicles, Drivers, Routes...">
+
+            </div>
+
+            <div class="top-icons">
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="profile-btn">
+
+                    <img
+                    src="https://ui-avatars.com/api/?name=Admin"
+                    alt="">
+
+                    <span>Admin</span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-header">
+
+            <h2>
+
+                Transport Operations Dashboard
+
+            </h2>
+
+            <p>
+
+                Welcome back! Here's today's transport overview.
+
+            </p>
+
+        </div>
+
+        <!-- KPI SECTION START -->
+
+        <section class="kpi-section">
+
+            <!-- =====================================================
+                    KPI CARDS
+====================================================== -->
+
+<section class="kpi-section">
+
+    <div class="kpi-grid">
+
+        <!-- Total Vehicles -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Total Vehicles
+                    </div>
+
+                    <div class="kpi-value counter" data-target="248">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-bus"></i>
+                </div>
+
+            </div>
+
+            <small class="text-success">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                +12 This Month
+            </small>
+
+        </div>
+
+        <!-- Drivers -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Active Drivers
+                    </div>
+
+                    <div class="kpi-value counter" data-target="116">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+
+            </div>
+
+            <small class="text-success">
+                <i class="fa-solid fa-circle-check"></i>
+                98% Available
+            </small>
+
+        </div>
+
+        <!-- Trips -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Today's Trips
+                    </div>
+
+                    <div class="kpi-value counter" data-target="1542">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+            </div>
+
+            <small class="text-primary">
+                <i class="fa-solid fa-location-dot"></i>
+                Live Tracking Enabled
+            </small>
+
+        </div>
+
+        <!-- Revenue -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Revenue
+                    </div>
+
+                    <div class="kpi-value">
+                        ₹4.2M
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+            </div>
+
+            <small class="text-success">
+                <i class="fa-solid fa-arrow-up"></i>
+                +18% Growth
+            </small>
+
+        </div>
+
+        <!-- Fuel -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Fuel Efficiency
+                    </div>
+
+                    <div class="kpi-value">
+                        91%
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-gas-pump"></i>
+                </div>
+
+            </div>
+
+            <div class="progress mt-3" style="height:8px;">
+
+                <div class="progress-bar bg-success"
+                    style="width:91%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Fleet Health -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Fleet Health
+                    </div>
+
+                    <div class="kpi-value">
+                        Excellent
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+            </div>
+
+            <small class="text-success">
+
+                96% Healthy Vehicles
+
+            </small>
+
+        </div>
+
+        <!-- On Time -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        On-Time Trips
+                    </div>
+
+                    <div class="kpi-value">
+
+                        98%
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+            </div>
+
+            <small class="text-success">
+
+                Industry Leading
+
+            </small>
+
+        </div>
+
+        <!-- Alerts -->
+
+        <div class="kpi-card">
+
+            <div class="kpi-top">
+
+                <div>
+
+                    <div class="kpi-title">
+                        Active Alerts
+                    </div>
+
+                    <div class="kpi-value">
+
+                        12
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+            </div>
+
+            <small class="text-warning">
+
+                3 High Priority
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+       <!-- =====================================================
+                    LIVE OPERATIONS
+====================================================== -->
+
+<section class="operations-section">
+
+    <div class="row g-4">
+
+        <!-- ================= Live Map ================= -->
+
+        <div class="col-lg-8">
+
+            <div class="glass-card h-100">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <div>
+
+                        <h4 class="mb-1">
+                            Live Fleet Tracking
+                        </h4>
+
+                        <small class="text-secondary">
+                            Real-time vehicle locations
+                        </small>
+
+                    </div>
+
+                    <span class="badge bg-success">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+                <div id="fleetMap"></div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= AI Recommendation ================= -->
+
+        <div class="col-lg-4">
+
+            <div class="glass-card mb-4">
+
+                <h5 class="mb-4">
+
+                    🤖 AI Recommendation
+
+                </h5>
+
+                <div class="alert alert-success">
+
+                    <strong>Route 12</strong><br>
+
+                    Increase bus frequency between
+                    <strong>8:00 AM - 10:00 AM</strong>
+
+                </div>
+
+                <div class="alert alert-warning">
+
+                    Bus <strong>TR-108</strong>
+
+                    requires maintenance within
+
+                    <strong>3 Days</strong>
+
+                </div>
+
+                <div class="alert alert-primary">
+
+                    Passenger demand expected
+
+                    <strong>+22%</strong>
+
+                    tomorrow.
+
+                </div>
+
+            </div>
+
+            <div class="glass-card">
+
+                <h5 class="mb-4">
+
+                    AI Health Score
+
+                </h5>
+
+                <div class="progress mb-3" style="height:14px;">
+
+                    <div class="progress-bar bg-success"
+
+                        style="width:96%;">
+
+                        96%
+
+                    </div>
+
+                </div>
+
+                <p class="text-secondary mb-0">
+
+                    Fleet operating efficiently with
+
+                    very low operational risk.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+                    ANALYTICS
+====================================================== -->
+
+<section>
+
+    <div class="row g-4">
+
+        <div class="col-lg-8">
+
+            <div class="glass-card">
+
+                <div class="d-flex justify-content-between">
+
+                    <h4>
+
+                        Revenue Analytics
+
+                    </h4>
+
+                    <select class="form-select w-auto bg-dark text-light">
+
+                        <option>Monthly</option>
+
+                        <option>Weekly</option>
+
+                    </select>
+
+                </div>
+
+                <canvas id="revenueChart"
+                    height="110"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="glass-card">
+
+                <h4 class="mb-4">
+
+                    Fleet Distribution
+
+                </h4>
+
+                <canvas id="fleetChart"
+                    height="260"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+                    ALERTS & WEATHER
+====================================================== -->
+
+<section>
+
+    <div class="row g-4">
+
+        <!-- Alerts -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card">
+
+                <h4 class="mb-4">
+
+                    Live Alerts
+
+                </h4>
+
+                <ul class="list-group">
+
+                    <li class="list-group-item bg-transparent text-light">
+
+                        🚨 Heavy traffic on Route 5
+
+                    </li>
+
+                    <li class="list-group-item bg-transparent text-light">
+
+                        🔧 Bus TR-108 Maintenance Due
+
+                    </li>
+
+                    <li class="list-group-item bg-transparent text-light">
+
+                        ✅ Route 21 Optimized
+
+                    </li>
+
+                    <li class="list-group-item bg-transparent text-light">
+
+                        🚍 Bus TR-201 Returned
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Weather -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card text-center">
+
+                <h4>
+
+                    🌤 Weather
+
+                </h4>
+
+                <h1 class="display-4">
+
+                    30°C
+
+                </h1>
+
+                <h5>
+
+                    Chennai
+
+                </h5>
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col">
+
+                        Humidity
+
+                        <h5>72%</h5>
+
+                    </div>
+
+                    <div class="col">
+
+                        Wind
+
+                        <h5>18 km/h</h5>
+
+                    </div>
+
+                    <div class="col">
+
+                        Rain
+
+                        <h5>12%</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
