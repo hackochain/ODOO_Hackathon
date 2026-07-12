@@ -54,3 +54,14 @@ The front end was successfully implemented
 Phase4:
 The backend is setting bulid
 -> The data  base was updated in the backend 
+->Fleet Management
+The Fleet Management module enables administrators to register, monitor, and manage all transport vehicles. It provides vehicle details, operational status, maintenance records, fuel information, and ensures efficient fleet utilization.
+
+->Dashboard
+The Dashboard provides a centralized overview of transport operations through real-time KPIs, fleet statistics, operational alerts, live monitoring, and interactive visualizations for quick decision-making.
+
+->Route Management
+The Route Management module allows users to create, organize, and optimize transport routes by managing route details, stops, travel distance, estimated time, and route assignments for efficient operations.
+
+->Analytics
+The Analytics module transforms operational data into meaningful insights using interactive charts and reports. It helps monitor fleet performance, fuel efficiency, operational costs, trip statistics, and overall transport efficiency.
