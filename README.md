@@ -77,14 +77,19 @@ The Authentication module provides secure login and role-based access control.
 It validates user credentials and prevents unauthorized access to the platform.
 Users are granted permissions based on their assigned roles for secure transport operations.
 
+The authentication system in TransitOps is built using JWT (JSON Web Token) based authentication with password hashing for secure user management.
+
+The main technologies used are:
+#JWT (JSON Web Token)
+#Flask-JWT-Extended
+#Password Hashing (Werkzeug Security)
+#Role-Based Access Control (RBAC)
+
 PHASE 6:
 
 upgraded the routes in the backend.
-
 starting the controlling part of all elements like analytics, fleet, ai etc..,
-
 Finished setting up the controllers in the backend.
-
 moving to the services section to implement features in each sections.
 
 PHASE 7:
